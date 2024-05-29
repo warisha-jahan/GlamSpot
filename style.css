@@ -262,6 +262,64 @@ nav a:hover::before {
 
 
 
+/* Contact Us Section */
+
+.contact-us{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+   
+}
+.contact-content{
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 20px 10px;
+}
+
+.contact-form {
+          display: flex;
+          margin:50px 20px;
+        
+          
+}    
+
+.contact-form .side-1{
+    display: flex;
+   flex-direction: column;
+ 
+}
+
+.side-1 input,.side-2 textarea {
+    padding: 20px  ;
+    width: 400px;
+    display: block;
+    margin: 10px;
+    text-align: left;
+    border: 0;
+    box-shadow: 2px 1px 8px grey;
+}
+
+button{
+    border: 0;
+    color: black;
+    background-color:#7209B7;
+    padding: 10px ;
+    display: block;
+    width:13%;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 2px 1px 8px grey;
+    border-radius: 20px;
+    transition: background 2s;
+    cursor: pointer;
+   
+}
+button:hover{
+    background: linear-gradient(45deg, #7209B7,#310052,#7209B7);
+}
 
 
 
@@ -270,18 +328,14 @@ nav a:hover::before {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* Footer Start */
+footer{
+    padding: 15px ;
+    background: linear-gradient(45deg, #88013d, #ff0073, #81023b);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
 
 
 
