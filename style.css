@@ -4,11 +4,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-section h2 {
+h2 {
     font-size: 3.5rem;
     padding: 20px;
     text-align: center;
     color: #7209B7;
+    margin: 10px;
 }
 
 .navigation {
@@ -114,12 +115,94 @@ nav a:hover::before {
 }
 
 
+
+
+/* About Us  */
+
+
 .About-us {
-    height: 500px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
+.About-us img{
+    max-width: 100%;
+    padding: 40px;
+   
+}
+.about-content{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px
+   
+  
+}
+.about-content p{
+    font-size: 1.3rem;
+    color:#F72585;
+}
+
+
+.accordion li{
+    list-style-type: none;
+   
+}
+
+.accordion input[type="radio"] {
+    display: none;
+}
+
+.accordion li label{
+    padding: 15px 25px;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px grey;
+    display: block;
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    color:#F72585;
+    
+   
+}
+
+.accordion li label::after{
+    content:"+";
+   position: absolute;
+   right: 20px;
+   font-size: 40px;
+   transition: transform 1s;
+}
+.accordion li  .content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+
+.accordion input[type="radio"]:checked + label +.content{
+    max-height: 600px;
+    box-shadow: 2px 2px 8px grey;
+    padding: 20px;
+    margin: 0;
+    color: black;
+
+}
+
+.accordion input[type="radio"]:checked + label::after{
+    content:"+";
+    transform:rotate(45deg) ;
+}
 /* Services */
+
+
+
 .services-container {
     height: 600px;
     display: flex;
