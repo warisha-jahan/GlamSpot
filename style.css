@@ -3,7 +3,11 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 15rem;
+    
+}
 h2 {
     font-size: 3.5rem;
     padding: 20px;
