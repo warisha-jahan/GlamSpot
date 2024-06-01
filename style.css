@@ -31,10 +31,12 @@ h2 {
     color: #F72585;
     font-size: 23px;
     cursor: pointer;
+    animation: LeftFadding 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 0.4s ease-out;
 }
 
 .logo:hover {
-    animation: scaling 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: scale(1.1);
 }
 
 nav {
@@ -99,8 +101,8 @@ nav a:hover::before {
     color: white;
     flex-direction: column;
     text-align: center;
-    transition: background 1s ease-in-out;
-    animation: bgImageChange 10s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    transition: all 0.7s ease-out;
+    animation: bgImageChange 10s ease-in-out infinite;
 
 }
 
@@ -208,10 +210,11 @@ nav a:hover::before {
 
 
 .services-container {
-    height: 600px;
+    height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
+   
     flex-direction: column;
     background: linear-gradient(45deg,rgba(0, 0, 0, 0.414), #7109b76d), url(images/services.jpg) center top/cover no-repeat fixed;
 
@@ -230,23 +233,34 @@ nav a:hover::before {
     width: 400px;
     height: 400px;
     
-    margin: 10px;
+    margin: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     animation: LeftFadding 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.7s ease-out;
+    cursor: pointer;
+    
 
 
 }
-
+.service-card:hover{
+    transform: scale(1.2);
+    z-index: 1;
+  
+   
+}
 .service-card img {
     max-width: 100%;
-
+  
+    
 
 
 
 }
+
+
 
 .card-content {
     padding: 20px 10px;
@@ -303,7 +317,31 @@ nav a:hover::before {
     text-align: left;
     border: 0;
     box-shadow: 2px 1px 8px grey;
+    transition: background 1s ease , transform 0.5s ease-out;
+   
 }
+
+input:focus ,textarea:focus{
+    background: #7109b727;
+    transform: translateX(-50px);
+}
+textarea:focus{
+    transform: scale(1.1)
+}
+input::placeholder  ,textarea::placeholder{
+    position: absolute;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+input:focus::placeholder ,textarea:focus::placeholder{
+    font-size: 12px;
+    position: absolute;
+    top: 3px;
+}
+
+
+
+
 
 button{
     border: 0;
@@ -317,12 +355,13 @@ button{
     font-weight: bold;
     box-shadow: 2px 1px 8px grey;
     border-radius: 20px;
-    transition: background 2s;
+    transition: all 0.7s ease-in-out;
     cursor: pointer;
    
 }
 button:hover{
     background: linear-gradient(45deg, #7209B7,#310052,#7209B7);
+    transform: scale(1.2);
 }
 
 
@@ -428,3 +467,8 @@ footer{
         transform: scale(1.2);
     }
 }
+
+
+
+
+
